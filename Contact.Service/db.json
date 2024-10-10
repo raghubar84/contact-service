@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "FirstName": "John",
+    "LastName": "Lama",
+    "Email": "john@gmail.com"
+  },
+  {
+    "Id": 2,
+    "FirstName": "Sourav",
+    "LastName": "Dey",
+    "Email": "sourav@gmail.com"
+  },
+  {
+    "Id": 3,
+    "FirstName": "Debajit",
+    "LastName": "Biswas",
+    "Email": "debajit@gmail.com"
+  },
+  {
+    "Id": 4,
+    "FirstName": "string",
+    "LastName": "string",
+    "Email": "user@example.com"
+  }
+]
