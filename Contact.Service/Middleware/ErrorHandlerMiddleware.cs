@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Contact.Service.Controllers;
+using Contact.Service.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
 namespace Contact.Service.Middleware
@@ -19,9 +21,9 @@ namespace Contact.Service.Middleware
                 var problemDetails = new ProblemDetails
                 {
                     Status = response.StatusCode,
-                    Title = error.Message,
+                    Title = "Unexpected exception occured.",
                 };
-                logger.LogError(error.Message);
+                logger.LogError(error, $"{nameof(ErrorHandlerMiddleware)}: Exception occured while proccessing request.");
                 var result = JsonSerializer.Serialize(problemDetails);
                 await response.WriteAsync(result);
             }
